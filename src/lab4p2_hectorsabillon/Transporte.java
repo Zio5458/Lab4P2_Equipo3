@@ -69,7 +69,7 @@ public abstract class Transporte {
     
     @Override
     public String toString() {
-        return "Transporte{" + "tanque=" + tanque + ", distancia=" + distancia + ", primates=" + primates + '}';
+        return "Tanque: " + tanque + "%\nDistancia: " + distancia+"\nGalones: "+galones;
     }
 
     public abstract boolean viajar();

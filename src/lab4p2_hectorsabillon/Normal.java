@@ -94,7 +94,7 @@ public class Normal extends Transporte {
     
     @Override
     public String toString() {
-        return "Normal{" + "pasajeros=" + pasajeros + ", longitud=" + longitud + ", motores=" + motores + super.toString() + '}';
+        return "Aereo Normal\n\n"+super.toString() + "\nPasajeros: " + pasajeros + "\nLongitud: " + longitud + "\nMotores=" + motores;
     }
 
     @Override

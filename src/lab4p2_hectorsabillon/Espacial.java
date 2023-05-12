@@ -65,7 +65,7 @@ public class Espacial extends Transporte {
 
     @Override
     public String toString() {
-        return "Espacial{" + "combustible=" + combustible + ", combate=" + combate + '}';
+        return "Aereo Espacial\n\n"+super.toString() + "\nCombustible: " + combustible + "\nTipo de nave: " + combate;
     }
 
     public int getGalones() {
