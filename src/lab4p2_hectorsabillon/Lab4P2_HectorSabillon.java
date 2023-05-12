@@ -1,6 +1,5 @@
 package lab4p2_hectorsabillon;
 
-import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -427,9 +426,21 @@ public class Lab4P2_HectorSabillon {
                     }
                     break;
                 case 5:
-                    for (Transporte o : transportes) {
+                    System.out.println("INGENIERO, ingrese su nombre de usuario: ");
+                    String usuario = pochita.nextLine();
+                    System.out.println("Ingrese contrasena: ");
+                    String contra = pochita.nextLine();
+                    int cont = 0;
+                    for (int i = 0; i < lista.size(); i++) {
+                        if (lista.get(i) instanceof Ingenieros){
+                           if (((Ingenieros) lista.get(i)).getUsuario().equals(usuario) && ((Ingenieros) lista.get(i)).getContra().equals(contra)){
+                               System.out.println("BIENVENIDO, INGENIERO " + ((Ingenieros)lista.get(i)).getNombre());
+                           }
+                        }
+                    }
+                    for (Transporte o : transportes) {                        
                         if (o.viajar()) {
-
+                            
                         }
                     }
                     break;
