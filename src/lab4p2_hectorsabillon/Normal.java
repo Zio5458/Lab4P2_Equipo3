@@ -18,6 +18,7 @@ public class Normal extends Transporte {
     private int pasajeros;
     private int longitud;
     private int motores;
+    private int galonesPostViaje;
 
     public Normal(int pasajeros, int longitud, int motores, double tanque, int distancia, ArrayList<Primates> primates, int galones) {
         super(tanque, distancia, primates, galones);
@@ -82,6 +83,14 @@ public class Normal extends Transporte {
         this.galones = galones;
     }
 
+    public int getGalonesPostViaje() {
+        return galonesPostViaje;
+    }
+
+    public void setGalonesPostViaje(int galonesPostViaje) {
+        this.galonesPostViaje = galonesPostViaje;
+    }
+
     
     
     @Override
@@ -96,15 +105,16 @@ public class Normal extends Transporte {
         int comidanecesaria = 0;
         for (int i = 0; i < primates.size(); i++) {
             comidatotal += primates.get(i).getCant_comida();
-        }//for comida total disponible
+        }
 
         for (int i = 0; i < primates.size(); i++) {
             comidanecesaria += primates.get(i).getCom_pkm();
-        }//for comida necesaria para el viaje
+        }
         
         if (primates.isEmpty() || consumo > (galones * tanque) || comidanecesaria > comidatotal) {
             return false;
         } else {
+            this.galonesPostViaje = 0;
             return true;
         }
 
