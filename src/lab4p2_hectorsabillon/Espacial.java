@@ -17,8 +17,8 @@ public class Espacial extends Transporte {
     private String combustible;
     private boolean combate;
 
-    public Espacial(String combustible, boolean combate, double tanque, int distancia, ArrayList<Primates> primates) {
-        super(tanque, distancia, primates);
+    public Espacial(String combustible, boolean combate, double tanque, int distancia, ArrayList<Primates> primates, int galones) {
+        super(tanque, distancia, primates, galones);
         this.combustible = combustible;
         this.combate = combate;
     }

@@ -13,13 +13,15 @@ import java.util.ArrayList;
 public abstract class Transporte {
     
     protected double tanque;
+    protected int galones;
     protected int distancia;
     protected ArrayList<Primates> primates;
 
-    public Transporte(double tanque, int distancia, ArrayList<Primates> primates) {
+    public Transporte(double tanque, int distancia, ArrayList<Primates> primates, int galones) {
         this.tanque = tanque;
         this.distancia = distancia;
         this.primates = primates;
+        this.galones = galones;
     }
 
     public double getTanque() {

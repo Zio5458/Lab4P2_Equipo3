@@ -19,8 +19,8 @@ public class Normal extends Transporte {
     private int longitud;
     private int motores;
 
-    public Normal(int pasajeros, int longitud, int motores, double tanque, int distancia, ArrayList<Primates> primates) {
-        super(tanque, distancia, primates);
+    public Normal(int pasajeros, int longitud, int motores, double tanque, int distancia, ArrayList<Primates> primates, int galones) {
+        super(tanque, distancia, primates, galones);
         this.pasajeros = pasajeros;
         this.longitud = longitud;
         this.motores = motores;

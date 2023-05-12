@@ -62,7 +62,7 @@ public class SeresVivos {
 
     @Override
     public String toString() {
-        return "SeresVivos{" + "nombre=" + nombre + ", grupo_sanguineo=" + grupo_sanguineo + ", sexo=" + sexo + ", altura=" + altura + ", peso=" + peso + '}';
+        return "SeresVivos" + "\nnombre: " + nombre + "\ngrupo_sanguineo: " + grupo_sanguineo + "\nsexo=" + sexo + "\naltura=" + altura + "\npeso=" + peso;
     }
     
     
