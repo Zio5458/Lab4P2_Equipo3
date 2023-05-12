@@ -112,7 +112,7 @@ public class Normal extends Transporte {
         if (primates.isEmpty() || consumo > (galones * tanque) || hambrientos > 0) {
             return false;
         } else {
-            this.galonesPostViaje = 0;
+            this.galonesPostViaje = (int) ((galones * tanque) - consumo);
             return true;
         }
 

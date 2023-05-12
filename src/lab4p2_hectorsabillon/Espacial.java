@@ -16,6 +16,7 @@ public class Espacial extends Transporte {
     
     private String combustible;
     private boolean combate;
+    private int galonesPostViaje;
 
     public Espacial(String combustible, boolean combate, double tanque, int distancia, ArrayList<Primates> primates, int galones) {
         super(tanque, distancia, primates, galones);
@@ -75,6 +76,14 @@ public class Espacial extends Transporte {
     public void setGalones(int galones) {
         this.galones = galones;
     }
+
+    public int getGalonesPostViaje() {
+        return galonesPostViaje;
+    }
+
+    public void setGalonesPostViaje(int galonesPostViaje) {
+        this.galonesPostViaje = galonesPostViaje;
+    }
     
     
     
@@ -91,6 +100,7 @@ public class Espacial extends Transporte {
         if (consumo > (galones * tanque) || hambrientos > 0 || primates.isEmpty()){
             return false;
         } else {
+            this.galonesPostViaje = (int) ((galones * tanque) - consumo);
             return true;
         }
     }
