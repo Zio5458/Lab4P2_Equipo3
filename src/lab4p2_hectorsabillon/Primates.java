@@ -95,6 +95,16 @@ public class Primates extends SeresVivos{
         this.peso = peso;
     }
 
+    public Transporte getTransporte() {
+        return transporte;
+    }
+
+    public void setTransporte(Transporte transporte) {
+        this.transporte = transporte;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Primates\n\n"+super.toString() + "Cant de Comida: " + cant_comida + "\nComida por KM: " + com_pkm + "\nNacimiento: " + nacimiento;

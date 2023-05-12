@@ -18,7 +18,6 @@ public class Normal extends Transporte {
     private int pasajeros;
     private int longitud;
     private int motores;
-    private int galonesPostViaje;
 
     public Normal(int pasajeros, int longitud, int motores, double tanque, int distancia, ArrayList<Primates> primates, int galones) {
         super(tanque, distancia, primates, galones);

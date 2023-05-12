@@ -11,11 +11,12 @@ import java.util.ArrayList;
  * @author hdann
  */
 public abstract class Transporte {
-    
+
     protected double tanque;
     protected int galones;
     protected int distancia;
     protected ArrayList<Primates> primates;
+    protected int galonesPostViaje;
 
     public Transporte(double tanque, int distancia, ArrayList<Primates> primates, int galones) {
         this.tanque = tanque;
@@ -56,15 +57,21 @@ public abstract class Transporte {
         this.galones = galones;
     }
 
+    public int getGalonesPostViaje() {
+        return galonesPostViaje;
+    }
+
+    public void setGalonesPostViaje(int galonesPostViaje) {
+        this.galonesPostViaje = galonesPostViaje;
+    }
+
     
     
     @Override
     public String toString() {
         return "Transporte{" + "tanque=" + tanque + ", distancia=" + distancia + ", primates=" + primates + '}';
     }
-    
-    
-    
+
     public abstract boolean viajar();
-    
+
 }

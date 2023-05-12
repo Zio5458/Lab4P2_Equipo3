@@ -440,7 +440,12 @@ public class Lab4P2_HectorSabillon {
                     }
                     for (Transporte o : transportes) {                        
                         if (o.viajar()) {
-                            
+                            int g = o.getGalonesPostViaje();
+                            System.out.println("Cantidad de galones restantes en viaje: " + o + ":" + g);
+                            for (int i = 0; i < o.getPrimates().size(); i++) {
+                                int comida = o.getPrimates().get(i).getCant_comida() - (o.getDistancia()*(o.getPrimates().get(i).getCom_pkm()));;
+                                System.out.println("Cantidad de comida restante para el primate: " + o.getPrimates().get(i) + ":" + comida);
+                            }
                         }
                     }
                     break;
