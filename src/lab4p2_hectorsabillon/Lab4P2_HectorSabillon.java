@@ -22,7 +22,7 @@ public class Lab4P2_HectorSabillon {
                     + "6.Salir\n"
                     + "Elegir una opcion: ");
             opc = pochita.nextInt();
-            pochite.nextLine();
+            pochita.nextLine();
             switch (opc) {
                 case 1:
                     System.out.print("---Crear---\n\n"
