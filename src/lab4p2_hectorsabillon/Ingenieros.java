@@ -14,6 +14,12 @@ public class Ingenieros extends SeresVivos {
     private String usuario;
     private String contra;
 
+    
+
+    public Ingenieros() {
+        super();
+    }
+    
     public Ingenieros(int numero, String usuario, String contra, String nombre, String grupo_sanguineo, String sexo, int altura, int peso) {
         super(nombre, grupo_sanguineo, sexo, altura, peso);
         this.numero = numero;
@@ -87,7 +93,7 @@ public class Ingenieros extends SeresVivos {
 
     @Override
     public String toString() {
-        return "Ingenieros{" + "numero=" + numero + ", usuario=" + usuario + ", contra=" + contra + super.toString() + '}';
+        return "Ingeniero\n\n"+super.toString()+"Numero:" + numero + "\nUsuario: " + usuario + "\nContrasena: " + contra;
     }
     
     

@@ -89,7 +89,7 @@ public class Primates extends SeresVivos{
 
     @Override
     public String toString() {
-        return "Primates{" + "cant_comida=" + cant_comida + ", com_pkm=" + com_pkm + ", nacimiento=" + nacimiento + super.toString() + '}';
+        return "Primates\n\n"+super.toString() + "Cant de Comida: " + cant_comida + "\nComida por KM: " + com_pkm + "\nNacimiento: " + nacimiento;
     }
     
     

@@ -12,6 +12,10 @@ public class SeresVivos {
     protected int altura;
     protected int peso;
 
+    public SeresVivos() {
+    }
+    
+    
     public SeresVivos(String nombre, String grupo_sanguineo, String sexo, int altura, int peso) {
         this.nombre = nombre;
         this.grupo_sanguineo = grupo_sanguineo;
@@ -62,7 +66,7 @@ public class SeresVivos {
 
     @Override
     public String toString() {
-        return "SeresVivos" + "\nnombre: " + nombre + "\ngrupo_sanguineo: " + grupo_sanguineo + "\nsexo=" + sexo + "\naltura=" + altura + "\npeso=" + peso;
+        return "Nombre: " + nombre + "\nGrupo Sanguineo: " + grupo_sanguineo + "\nSexo: " + sexo + "\nAltura: " + altura + "\nPeso:" + peso+"\n";
     }
     
     
