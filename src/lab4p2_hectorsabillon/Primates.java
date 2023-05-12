@@ -15,6 +15,14 @@ public class Primates extends SeresVivos{
     private String nacimiento;
     private Transporte transporte;
 
+    public Primates(int cant_comida, int com_pkm, String nacimiento, String nombre, String grupo_sanguineo, String sexo, int altura, int peso) {
+        super(nombre, grupo_sanguineo, sexo, altura, peso);
+        this.cant_comida = cant_comida;
+        this.com_pkm = com_pkm;
+        this.nacimiento = nacimiento;
+    }
+    
+    
     public Primates(int cant_comida, int com_pkm, String nacimiento, String nombre, String grupo_sanguineo, String sexo, int altura, int peso, Transporte transporte) {
         super(nombre, grupo_sanguineo, sexo, altura, peso);
         this.cant_comida = cant_comida;

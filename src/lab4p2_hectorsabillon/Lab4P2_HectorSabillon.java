@@ -1,6 +1,7 @@
 
 package lab4p2_hectorsabillon;
 
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -8,6 +9,7 @@ import java.util.Scanner;
 public class Lab4P2_HectorSabillon {
 
     static ArrayList<Transporte> transportes = new ArrayList();
+    static ArrayList lista = new ArrayList();
     
     public static void main(String[] args) {
         Scanner pochita = new Scanner(System.in);
@@ -34,12 +36,53 @@ public class Lab4P2_HectorSabillon {
                             + "Elegir una opcion: ");
                     pochita = new Scanner(System.in);
                     opc = pochita.nextInt();
+                    String nombre, grupoSanguineo,Sexo = "";
+                    int altura,peso, galones, distancia = 0;
+                    double tanque = 0;
                     switch (opc) {
                         case 1:
-                            
+                            System.out.print("Ingrese el nombre: ");
+                            nombre = pochita.nextLine();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese el grupo sanguineo: ");
+                            grupoSanguineo = pochita.nextLine();
+                            System.out.print("Ingrese el sexo: ");
+                            Sexo = pochita.nextLine();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese la altura: ");
+                            altura = pochita.nextInt();
+                            System.out.print("Ingrese el peso: ");
+                            peso = pochita.nextInt();
+                            System.out.print("Ingrese el numero de RRHH: ");
+                            int RRHH = pochita.nextInt();
+                            System.out.print("Ingrese el usuario: ");
+                            String usuario = pochita.nextLine();
+                            System.out.print("Ingrese la contrasena: ");
+                            String contrasena = pochita.nextLine();
+                            lista.add(new Ingenieros(RRHH, usuario, contrasena, nombre, grupoSanguineo, Sexo, altura, peso));
                             break;
                             //fin opc 1
                         case 2:
+                            System.out.print("Ingrese el nombre: ");
+                            nombre = pochita.nextLine();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese el grupo sanguineo: ");
+                            grupoSanguineo = pochita.nextLine();
+                            System.out.print("Ingrese el sexo: ");
+                            Sexo = pochita.nextLine();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese la altura: ");
+                            altura = pochita.nextInt();
+                            System.out.print("Ingrese el peso: ");
+                            peso = pochita.nextInt();
+                            System.out.print("Ingrese la cantidad de comida: ");
+                            int cantCom = pochita.nextInt();
+                            System.out.print("Ingrese la cantidad de comida que come pos KM: ");
+                            int comKM = pochita.nextInt();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese el lugar de nacimiento: ");
+                            String nacimiento = pochita.nextLine();
+                            lista.add(new Primates(cantCom, comKM, nacimiento, nombre, grupoSanguineo, Sexo, altura, peso));
                             break;
                             //fin opc 2
                         case 3:
