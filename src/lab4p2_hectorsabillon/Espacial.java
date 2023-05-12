@@ -6,48 +6,37 @@ package lab4p2_hectorsabillon;
 
 import java.util.ArrayList;
 import java.util.Random;
-
 /**
  *
  * @author hdann
  */
-public class Normal extends Transporte {
+public class Espacial extends Transporte {
 
     static Random random = new Random();
+    
+    private String combustible;
+    private boolean combate;
 
-    private int pasajeros;
-    private int longitud;
-    private int motores;
-
-    public Normal(int pasajeros, int longitud, int motores, double tanque, int distancia, ArrayList<Primates> primates) {
+    public Espacial(String combustible, boolean combate, double tanque, int distancia, ArrayList<Primates> primates) {
         super(tanque, distancia, primates);
-        this.pasajeros = pasajeros;
-        this.longitud = longitud;
-        this.motores = motores;
+        this.combustible = combustible;
+        this.combate = combate;
     }
 
-    public int getPasajeros() {
-        return pasajeros;
+    public String getCombustible() {
+        return combustible;
     }
 
-    public void setPasajeros(int pasajeros) {
-        this.pasajeros = pasajeros;
+    public void setCombustible(String combustible) {
+        this.combustible = combustible;
     }
 
-    public int getLongitud() {
-        return longitud;
+    public boolean isCombate() {
+        return combate;
     }
 
-    public void setLongitud(int longitud) {
-        this.longitud = longitud;
-    }
-
-    public int getMotores() {
-        return motores;
-    }
-
-    public void setMotores(int motores) {
-        this.motores = motores;
+    public void setCombate(boolean combate) {
+        this.combate = combate;
     }
 
     public double getTanque() {
@@ -76,28 +65,31 @@ public class Normal extends Transporte {
 
     @Override
     public String toString() {
-        return "Normal{" + "pasajeros=" + pasajeros + ", longitud=" + longitud + ", motores=" + motores + super.toString() + '}';
+        return "Espacial{" + "combustible=" + combustible + ", combate=" + combate + '}';
     }
-
+    
+    
+    
     @Override
     public boolean viajar() {
-        double consumo = (this.distancia * 0.15) + ((random.nextInt(75) + 25));
+        double consumo = ((this.distancia * 0.32) + ((random.nextInt(10) + 25)) + 3) * (3/2);
         int comidatotal = 0;
         int comidanecesaria = 0;
-        for (int i = 0; i < primates.size(); i++) {
+        for (int i = 0; i < primates.size(); i++){
             comidatotal += primates.get(i).getCant_comida();
         }//for comida total disponible
-
-        for (int i = 0; i < primates.size(); i++) {
+        
+        for (int i = 0; i < primates.size(); i++){
             comidanecesaria += primates.get(i).getCom_pkm();
         }//for comida necesaria para el viaje
         
-        if (primates.isEmpty() || consumo > tanque || comidanecesaria > comidatotal) {
+        if (consumo > tanque || comidanecesaria > comidatotal || primates.isEmpty()){
             return false;
         } else {
             return true;
         }
-
     }
-
+    
+    
+    
 }

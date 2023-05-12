@@ -53,6 +53,6 @@ public abstract class Transporte {
     
     
     
-    public abstract void viajar();
+    public abstract boolean viajar();
     
 }
