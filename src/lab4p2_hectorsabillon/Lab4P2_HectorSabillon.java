@@ -1,11 +1,13 @@
 
 package lab4p2_hectorsabillon;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class Lab4P2_HectorSabillon {
 
+    static ArrayList<Transporte> transportes = new ArrayList();
     
     public static void main(String[] args) {
         Scanner pochita = new Scanner(System.in);
@@ -199,6 +201,16 @@ public class Lab4P2_HectorSabillon {
                     // fin opc 2
                 case 3:
                     //fin opc 3
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    for (Transporte o : transportes) {
+                        if (o.viajar()){
+                            
+                        }
+                    }
+                    break;
                 default:
                     throw new AssertionError();
             }
