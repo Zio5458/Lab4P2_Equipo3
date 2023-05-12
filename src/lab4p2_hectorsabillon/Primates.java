@@ -13,6 +13,7 @@ public class Primates extends SeresVivos{
     private int cant_comida;
     private int com_pkm;
     private String nacimiento;
+    private Transporte transporte;
 
     public Primates(int cant_comida, int com_pkm, String nacimiento, String nombre, String grupo_sanguineo, String sexo, int altura, int peso) {
         super(nombre, grupo_sanguineo, sexo, altura, peso);
