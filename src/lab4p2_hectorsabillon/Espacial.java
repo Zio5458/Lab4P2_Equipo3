@@ -67,6 +67,14 @@ public class Espacial extends Transporte {
     public String toString() {
         return "Espacial{" + "combustible=" + combustible + ", combate=" + combate + '}';
     }
+
+    public int getGalones() {
+        return galones;
+    }
+
+    public void setGalones(int galones) {
+        this.galones = galones;
+    }
     
     
     
@@ -83,7 +91,7 @@ public class Espacial extends Transporte {
             comidanecesaria += primates.get(i).getCom_pkm();
         }//for comida necesaria para el viaje
         
-        if (consumo > tanque || comidanecesaria > comidatotal || primates.isEmpty()){
+        if (consumo > (galones * tanque) || comidanecesaria > comidatotal || primates.isEmpty()){
             return false;
         } else {
             return true;

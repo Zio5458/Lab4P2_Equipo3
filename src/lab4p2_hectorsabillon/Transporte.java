@@ -48,6 +48,16 @@ public abstract class Transporte {
         this.primates = primates;
     }
 
+    public int getGalones() {
+        return galones;
+    }
+
+    public void setGalones(int galones) {
+        this.galones = galones;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Transporte{" + "tanque=" + tanque + ", distancia=" + distancia + ", primates=" + primates + '}';

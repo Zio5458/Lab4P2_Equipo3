@@ -74,6 +74,16 @@ public class Normal extends Transporte {
         this.primates = primates;
     }
 
+    public int getGalones() {
+        return galones;
+    }
+
+    public void setGalones(int galones) {
+        this.galones = galones;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Normal{" + "pasajeros=" + pasajeros + ", longitud=" + longitud + ", motores=" + motores + super.toString() + '}';
@@ -92,7 +102,7 @@ public class Normal extends Transporte {
             comidanecesaria += primates.get(i).getCom_pkm();
         }//for comida necesaria para el viaje
         
-        if (primates.isEmpty() || consumo > tanque || comidanecesaria > comidatotal) {
+        if (primates.isEmpty() || consumo > (galones * tanque) || comidanecesaria > comidatotal) {
             return false;
         } else {
             return true;
