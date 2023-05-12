@@ -182,10 +182,10 @@ public class Lab4P2_HectorSabillon {
                             + "1.Modificar Cantidad Maxima de Pasajeros\n"
                             + "3.Modificar Longitud Normal\n"
                             + "4.Modificar Cantidad de Motores\n"
-                            + "5.Modificar Grupo Sanguineo\n"
-                            + "6.Modificar Sexo\n"
-                            + "7.Modificar Altura\n"
-                            + "8.Modificar Peso\n"
+                            + "5.Modificar Porcentaje del Tanque\n"
+                            + "6.Modificar Cantidad de KM que puede recorrer\n"
+                            + "7.Modificar Primates asignados\n"
+                            
                             + "Elegir una opcion: ");
                             break;
                             //fin opc 4.
