@@ -26,6 +26,21 @@ public class Normal extends Transporte {
         this.motores = motores;
     }
 
+    public Normal(int pasajeros, int longitud, int motores) {
+        this.pasajeros = pasajeros;
+        this.longitud = longitud;
+        this.motores = motores;
+    }
+
+    public Normal(int pasajeros, int longitud, int motores, double tanque, int galones, int distancia, int galonesPostViaje) {
+        super(tanque, galones, distancia, galonesPostViaje);
+        this.pasajeros = pasajeros;
+        this.longitud = longitud;
+        this.motores = motores;
+    }
+
+    
+    
     public int getPasajeros() {
         return pasajeros;
     }

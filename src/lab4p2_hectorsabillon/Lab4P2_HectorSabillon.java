@@ -131,7 +131,7 @@ public class Lab4P2_HectorSabillon {
                             int longitud = pochita.nextInt();
                             System.out.print("Ingrese la cantidad de motores: ");
                             int motores = pochita.nextInt();
-                            transportes.add(new Normal(pasajeros, longitud, motores, tanque, distancia, lista, galones));
+                            transportes.add(new Normal(pasajeros, longitud, motores, tanque, galones, distancia, galones));
                             break;
                         //fin opc 5
                         default:
