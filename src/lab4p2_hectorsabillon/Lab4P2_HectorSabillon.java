@@ -185,8 +185,7 @@ public class Lab4P2_HectorSabillon {
                                 case 8:
                                     System.out.println("Ingrese nuevo peso: ");
                                     int nuevopeso = pochita.nextInt();
-                                    ((Ingenieros)lista.get(indice)).setPeso(nuevopeso);
-                                    
+                                    ((Ingenieros)lista.get(indice)).setPeso(nuevopeso);                                   
                                     break;
                                 //fin opc 8
                                 default:
@@ -195,49 +194,78 @@ public class Lab4P2_HectorSabillon {
                             break;
                         //fin opc 1
                         case 2:
+                            for (int i = 0; i < lista.size(); i++) {
+                                if (lista.get(i) instanceof Primates) {
+                                    System.out.println(i + " <- " + lista.get(i));
+                                }
+                            }
+                            System.out.println("Ingrese indice del primate a eliminar: ");
+                            int index = pochita.nextInt();
                             System.out.print("---Primate---\n\n"
-                                    + "1.Asignar Medio de Transporte\n"
-                                    + "2.Modificar Cantidad de Comida\n"
-                                    + "3.Modificar Cuanto Come por KM\n"
-                                    + "4.MOdificar Lugar de Nacimiento\n"
-                                    + "5.Modificar Nombre\n"
-                                    + "6.Modificar Grupo Sanguineo\n"
-                                    + "7.Modificar Sexo\n"
-                                    + "8.Modificar Altura\n"
-                                    + "9.Modificar Peso\n"
+                                    + "1.Modificar Cantidad de Comida\n"
+                                    + "2.Modificar Cuanto Come por KM\n"
+                                    + "3.MOdificar Lugar de Nacimiento\n"
+                                    + "4.Modificar Nombre\n"
+                                    + "5.Modificar Grupo Sanguineo\n"
+                                    + "6.Modificar Sexo\n"
+                                    + "7.Modificar Altura\n"
+                                    + "8.Modificar Peso\n"
                                     + "Elegir una opcion: ");
                             pochita = new Scanner(System.in);
                             opc = pochita.nextInt();
                             System.out.println("");
                             switch (opc) {
                                 case 1:
-
+                                    System.out.println("Ingrese nueva cantidad de comida: ");
+                                    int nuevacantidad = pochita.nextInt();
+                                    ((Primates)lista.get(index)).setCant_comida(nuevacantidad);
                                     break;
                                 //fin opc 1
                                 case 2:
+                                    System.out.println("Ingrese nueva cantidad consumida por km: ");
+                                    int nuevaconsumida = pochita.nextInt();
+                                    ((Primates)lista.get(index)).setCom_pkm(nuevaconsumida);
                                     break;
                                 //fin opc 2
                                 case 3:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nuevo lugar de nacimiento: ");
+                                    String nac = pochita.nextLine();
+                                    ((Primates)lista.get(index)).setNacimiento(nac);
                                     break;
                                 //fin opc 3
                                 case 4:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nuevo nombre: ");
+                                    String n = pochita.nextLine();
+                                    ((Primates)lista.get(index)).setNombre(n);
                                     break;
                                 //fin opc 4
                                 case 5:
+                                    System.out.println("Ingrese nuevo grupo sanguineo: ");
+                                    String ngs = pochita.nextLine();
+                                    ((Primates)lista.get(index)).setGrupo_sanguineo(ngs);
                                     break;
                                 //fin opc 5
                                 case 6:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nuevo sexo: ");
+                                    String s = pochita.nextLine();
+                                    ((Primates)lista.get(index)).setSexo(s);
                                     break;
                                 //fin opc 6
                                 case 7:
+                                    System.out.println("Ingrese nueva altura: ");
+                                    int nalt = pochita.nextInt();
+                                    ((Primates)lista.get(index)).setAltura(nalt);
                                     break;
                                 //fin opc 7
                                 case 8:
+                                    System.out.println("Ingrese nuevo peso: ");
+                                    int npes = pochita.nextInt();
+                                    ((Primates)lista.get(index)).setPeso(npes);
                                     break;
-                                //fin opc 8
-                                case 9:
-                                    break;
-                                //fin opc 9
+                                //fin opc 8                                
                                 default:
                                     throw new AssertionError();
                             }
