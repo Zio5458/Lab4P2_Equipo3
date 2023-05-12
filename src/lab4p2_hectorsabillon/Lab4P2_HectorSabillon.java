@@ -1,6 +1,7 @@
 package lab4p2_hectorsabillon;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Lab4P2_HectorSabillon {
@@ -113,6 +114,13 @@ public class Lab4P2_HectorSabillon {
                     opc = pochita.nextInt();
                     switch (opc) {
                         case 1:
+                            for (int i = 0; i < lista.size(); i++) {
+                                if (lista.get(i) instanceof Ingenieros) {
+                                    System.out.println(i + " <- " + lista.get(i));
+                                }
+                            }
+                            System.out.println("Ingrese indice del ingeniero a modificar: ");
+                            int indice = pochita.nextInt();
                             System.out.print("---Ingeniero---\n\n"
                                     + "1.Modificar numero de RRHH\n"
                                     + "2.Modificar Usuario\n"
@@ -128,28 +136,57 @@ public class Lab4P2_HectorSabillon {
                             System.out.println("");
                             switch (opc) {
                                 case 1:
-
+                                    System.out.println("Ingrese nuevo numero de RRHH");
+                                    int nuevonum = pochita.nextInt();
+                                    ((Ingenieros) lista.get(indice)).setNumero(nuevonum);
                                     break;
                                 //fin opc 1
                                 case 2:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nuevo nombre de usuario: ");
+                                    String nuevousuario = pochita.nextLine();
+                                    ((Ingenieros)lista.get(indice)).setUsuario(nuevousuario);
                                     break;
                                 //fin opc 2
                                 case 3:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nueva contrasena: ");
+                                    String nuevacontra = pochita.nextLine();
+                                    ((Ingenieros)lista.get(indice)).setContra(nuevacontra);
                                     break;
                                 //fin opc 3
                                 case 4:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nuevo nombre: ");
+                                    String nuevonombre = pochita.nextLine();
+                                    ((Ingenieros)lista.get(indice)).setNombre(nuevonombre);
                                     break;
                                 //fin opc 4
                                 case 5:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nuevo grupo sanguineo: ");
+                                    String nuevogrupo = pochita.nextLine();
+                                    ((Ingenieros)lista.get(indice)).setGrupo_sanguineo(nuevogrupo);
                                     break;
                                 //fin opc 5
                                 case 6:
+                                    pochita.nextLine();
+                                    System.out.println("Ingrese nuevo sexo: ");
+                                    String sexo = pochita.nextLine();
+                                    ((Ingenieros)lista.get(indice)).setSexo(sexo);
                                     break;
                                 //fin opc 6
                                 case 7:
+                                    System.out.println("Ingrese nueva altura: ");
+                                    int nuevaaltura = pochita.nextInt();
+                                    ((Ingenieros)lista.get(indice)).setAltura(nuevaaltura);
                                     break;
                                 //fin opc 7
                                 case 8:
+                                    System.out.println("Ingrese nuevo peso: ");
+                                    int nuevopeso = pochita.nextInt();
+                                    ((Ingenieros)lista.get(indice)).setPeso(nuevopeso);
+                                    
                                     break;
                                 //fin opc 8
                                 default:
@@ -369,7 +406,7 @@ public class Lab4P2_HectorSabillon {
                     int el = pochita.nextInt();
                     switch (el) {
                         case 1: {
-                            for (int i = 0;  i < lista.size(); i++) {
+                            for (int i = 0; i < lista.size(); i++) {
                                 if (lista.get(i) instanceof Planeta) {
                                     System.out.println(i + " <- " + lista.get(i));
                                 }
@@ -380,7 +417,7 @@ public class Lab4P2_HectorSabillon {
                             break;
                         }
                         case 2: {
-                            for (int i = 0; i <  lista.size(); i++) {
+                            for (int i = 0; i < lista.size(); i++) {
                                 if (lista.get(i) instanceof Ingenieros) {
                                     System.out.println(i + " <- " + lista.get(i));
                                 }
@@ -413,7 +450,7 @@ public class Lab4P2_HectorSabillon {
                             break;
                         }
                         case 5: {
-                            for (int i = 0; i< lista.size(); i++) {
+                            for (int i = 0; i < lista.size(); i++) {
                                 if (lista.get(i) instanceof Espacial) {
                                     System.out.println(i + " <- " + lista.get(i));
                                 }
@@ -432,20 +469,22 @@ public class Lab4P2_HectorSabillon {
                     String contra = pochita.nextLine();
                     int cont = 0;
                     for (int i = 0; i < lista.size(); i++) {
-                        if (lista.get(i) instanceof Ingenieros){
-                           if (((Ingenieros) lista.get(i)).getUsuario().equals(usuario) && ((Ingenieros) lista.get(i)).getContra().equals(contra)){
-                               System.out.println("BIENVENIDO, INGENIERO " + ((Ingenieros)lista.get(i)).getNombre());
-                           }
+                        if (lista.get(i) instanceof Ingenieros) {
+                            if (((Ingenieros) lista.get(i)).getUsuario().equals(usuario) && ((Ingenieros) lista.get(i)).getContra().equals(contra)) {
+                                System.out.println("BIENVENIDO, INGENIERO " + ((Ingenieros) lista.get(i)).getNombre());
+                            }
                         }
                     }
-                    for (Transporte o : transportes) {                        
+                    for (Transporte o : transportes) {
                         if (o.viajar()) {
                             int g = o.getGalonesPostViaje();
                             System.out.println("Cantidad de galones restantes en viaje: " + o + ":" + g);
                             for (int i = 0; i < o.getPrimates().size(); i++) {
-                                int comida = o.getPrimates().get(i).getCant_comida() - (o.getDistancia()*(o.getPrimates().get(i).getCom_pkm()));;
+                                int comida = o.getPrimates().get(i).getCant_comida() - (o.getDistancia() * (o.getPrimates().get(i).getCom_pkm()));
                                 System.out.println("Cantidad de comida restante para el primate: " + o.getPrimates().get(i) + ":" + comida);
                             }
+                        } else {
+                            System.out.println("El viaje no se puede realizar por insuficiencia de recursos");
                         }
                     }
                     break;
