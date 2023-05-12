@@ -114,7 +114,7 @@ public class Lab4P2_HectorSabillon {
                             //fin opc 1
                         case 2:
                             System.out.print("---Primate---\n\n"
-                            + "1.Modificar Medio de Transporte Asignado\n"
+                            + "1.Asignar Medio de Transporte\n"
                             + "2.Modificar Cantidad de Comida\n"
                             + "3.Modificar Cuanto Come por KM\n"
                             + "4.MOdificar Lugar de Nacimiento\n"
@@ -186,12 +186,74 @@ public class Lab4P2_HectorSabillon {
                             + "4.Modificar Cantidad de Motores\n"
                             + "5.Modificar Porcentaje del Tanque\n"
                             + "6.Modificar Cantidad de KM que puede recorrer\n"
-                            + "7.Modificar Primates asignados\n"
+                            + "7.Asignar Primates\n"
                             
                             + "Elegir una opcion: ");
+                            pochita = new Scanner(System.in);
+                            opc = pochita.nextInt();
+                            switch (opc) {
+                                case 1:
+                                    
+                                    break;
+                                    //fin opc 1
+                                case 2:
+                                    break;
+                                    //fin opc 2
+                                case 3:
+                                    break;
+                                    //fin opc 3
+                                case 4:
+                                    break;
+                                    //fin opc 4
+                                case 5:
+                                    break;
+                                    //fin opc 5
+                                case 6:
+                                    break;
+                                    //fin opc 6
+                                case 7:
+                                    break;
+                                    //fin opc 7
+                                
+                                default:
+                                    throw new AssertionError();
+                            }
                             break;
                             //fin opc 4.
                         case 5:
+                            System.out.print("---Aereo Espacial---\n\n"
+                            + "1.Modificar Tipo de Combustible\n"
+                            + "3.Modificar Tipo de nave\n"
+                            + "4.Modificar Porcentaje del Tanque\n"
+                            + "5.Modificar Cantidad de KM que puede recorrer\n"
+                            + "6.Asignar Primates\n"
+                            + "Elegir una opcion: ");
+                            pochita = new Scanner(System.in);
+                            opc = pochita.nextInt();
+                            switch (opc) {
+                                case 1:
+                                    
+                                    break;
+                                    //fin opc 1
+                                case 2:
+                                    break;
+                                    //fin opc 2
+                                case 3:
+                                    break;
+                                    //fin opc 3
+                                case 4:
+                                    break;
+                                    //fin opc 4
+                                case 5:
+                                    break;
+                                    //fin opc 5
+                                case 6:
+                                    break;
+                                    //fin opc 6
+                                
+                                default:
+                                    throw new AssertionError();
+                            }
                             break;
                             //fin opc 5
                         default:
