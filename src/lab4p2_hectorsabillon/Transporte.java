@@ -18,6 +18,17 @@ public abstract class Transporte {
     protected ArrayList<Primates> primates;
     protected int galonesPostViaje;
 
+    public Transporte() {
+    }
+
+    public Transporte(double tanque, int galones, int distancia, int galonesPostViaje) {
+        this.tanque = tanque;
+        this.galones = galones;
+        this.distancia = distancia;
+        this.galonesPostViaje = galonesPostViaje;
+    }
+
+    
     public Transporte(double tanque, int distancia, ArrayList<Primates> primates, int galones) {
         this.tanque = tanque;
         this.distancia = distancia;

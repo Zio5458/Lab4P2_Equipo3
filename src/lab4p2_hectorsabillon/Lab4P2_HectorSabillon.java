@@ -89,12 +89,49 @@ public class Lab4P2_HectorSabillon {
                             break;
                         //fin opc 2
                         case 3:
+                            System.out.print("Ingrese el nombre: ");
+                            nombre = pochita.nextLine();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese la distancia en km del planta: ");
+                            distancia = pochita.nextInt();
+                            lista.add(new Planeta(nombre, distancia));
                             break;
                         //fin opc 3
                         case 4:
+                            System.out.print("Ingrese el porcentaje del tanque: ");
+                            tanque = pochita.nextDouble();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese los galones: ");
+                            galones = pochita.nextInt();
+                            System.out.print("Ingrese el porcentaje del tanque: ");
+                            tanque = pochita.nextInt();
+                            System.out.print("Ingrese la distancia que puede recorrer la nave: ");
+                            distancia = pochita.nextInt();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese el tipo de combustible ");
+                            String tipoCombustible = pochita.nextLine();
+                            System.out.print("Ingrese el tipo de nave: ");
+                            String Tipon = pochita.nextLine();
+                            transportes.add(new Espacial(tipoCombustible, false, tanque, galones, distancia, galones));
                             break;
                         //fin opc 4.
                         case 5:
+                            System.out.print("Ingrese el porcentaje del tanque: ");
+                            tanque = pochita.nextDouble();
+                            pochita = new Scanner(System.in);
+                            System.out.print("Ingrese los galones: ");
+                            galones = pochita.nextInt();
+                            System.out.print("Ingrese el porcentaje del tanque: ");
+                            tanque = pochita.nextInt();
+                            System.out.print("Ingrese la distancia que puede recorrer la nave: ");
+                            distancia = pochita.nextInt();
+                            System.out.print("Ingrese la cantidad de pasajeros: ");
+                            int pasajeros = pochita.nextInt();
+                            System.out.print("Ingrese la longitud del viaje: ");
+                            int longitud = pochita.nextInt();
+                            System.out.print("Ingrese la cantidad de motores: ");
+                            int motores = pochita.nextInt();
+                            transportes.add(new Normal(pasajeros, longitud, motores, tanque, distancia, lista, galones));
                             break;
                         //fin opc 5
                         default:
@@ -145,47 +182,47 @@ public class Lab4P2_HectorSabillon {
                                     pochita.nextLine();
                                     System.out.println("Ingrese nuevo nombre de usuario: ");
                                     String nuevousuario = pochita.nextLine();
-                                    ((Ingenieros)lista.get(indice)).setUsuario(nuevousuario);
+                                    ((Ingenieros) lista.get(indice)).setUsuario(nuevousuario);
                                     break;
                                 //fin opc 2
                                 case 3:
                                     pochita.nextLine();
                                     System.out.println("Ingrese nueva contrasena: ");
                                     String nuevacontra = pochita.nextLine();
-                                    ((Ingenieros)lista.get(indice)).setContra(nuevacontra);
+                                    ((Ingenieros) lista.get(indice)).setContra(nuevacontra);
                                     break;
                                 //fin opc 3
                                 case 4:
                                     pochita.nextLine();
                                     System.out.println("Ingrese nuevo nombre: ");
                                     String nuevonombre = pochita.nextLine();
-                                    ((Ingenieros)lista.get(indice)).setNombre(nuevonombre);
+                                    ((Ingenieros) lista.get(indice)).setNombre(nuevonombre);
                                     break;
                                 //fin opc 4
                                 case 5:
                                     pochita.nextLine();
                                     System.out.println("Ingrese nuevo grupo sanguineo: ");
                                     String nuevogrupo = pochita.nextLine();
-                                    ((Ingenieros)lista.get(indice)).setGrupo_sanguineo(nuevogrupo);
+                                    ((Ingenieros) lista.get(indice)).setGrupo_sanguineo(nuevogrupo);
                                     break;
                                 //fin opc 5
                                 case 6:
                                     pochita.nextLine();
                                     System.out.println("Ingrese nuevo sexo: ");
                                     String sexo = pochita.nextLine();
-                                    ((Ingenieros)lista.get(indice)).setSexo(sexo);
+                                    ((Ingenieros) lista.get(indice)).setSexo(sexo);
                                     break;
                                 //fin opc 6
                                 case 7:
                                     System.out.println("Ingrese nueva altura: ");
                                     int nuevaaltura = pochita.nextInt();
-                                    ((Ingenieros)lista.get(indice)).setAltura(nuevaaltura);
+                                    ((Ingenieros) lista.get(indice)).setAltura(nuevaaltura);
                                     break;
                                 //fin opc 7
                                 case 8:
                                     System.out.println("Ingrese nuevo peso: ");
                                     int nuevopeso = pochita.nextInt();
-                                    ((Ingenieros)lista.get(indice)).setPeso(nuevopeso);                                   
+                                    ((Ingenieros) lista.get(indice)).setPeso(nuevopeso);
                                     break;
                                 //fin opc 8
                                 default:
@@ -218,52 +255,52 @@ public class Lab4P2_HectorSabillon {
                                 case 1:
                                     System.out.println("Ingrese nueva cantidad de comida: ");
                                     int nuevacantidad = pochita.nextInt();
-                                    ((Primates)lista.get(index)).setCant_comida(nuevacantidad);
+                                    ((Primates) lista.get(index)).setCant_comida(nuevacantidad);
                                     break;
                                 //fin opc 1
                                 case 2:
                                     System.out.println("Ingrese nueva cantidad consumida por km: ");
                                     int nuevaconsumida = pochita.nextInt();
-                                    ((Primates)lista.get(index)).setCom_pkm(nuevaconsumida);
+                                    ((Primates) lista.get(index)).setCom_pkm(nuevaconsumida);
                                     break;
                                 //fin opc 2
                                 case 3:
                                     pochita.nextLine();
                                     System.out.println("Ingrese nuevo lugar de nacimiento: ");
                                     String nac = pochita.nextLine();
-                                    ((Primates)lista.get(index)).setNacimiento(nac);
+                                    ((Primates) lista.get(index)).setNacimiento(nac);
                                     break;
                                 //fin opc 3
                                 case 4:
                                     pochita.nextLine();
                                     System.out.println("Ingrese nuevo nombre: ");
                                     String n = pochita.nextLine();
-                                    ((Primates)lista.get(index)).setNombre(n);
+                                    ((Primates) lista.get(index)).setNombre(n);
                                     break;
                                 //fin opc 4
                                 case 5:
                                     System.out.println("Ingrese nuevo grupo sanguineo: ");
                                     String ngs = pochita.nextLine();
-                                    ((Primates)lista.get(index)).setGrupo_sanguineo(ngs);
+                                    ((Primates) lista.get(index)).setGrupo_sanguineo(ngs);
                                     break;
                                 //fin opc 5
                                 case 6:
                                     pochita.nextLine();
                                     System.out.println("Ingrese nuevo sexo: ");
                                     String s = pochita.nextLine();
-                                    ((Primates)lista.get(index)).setSexo(s);
+                                    ((Primates) lista.get(index)).setSexo(s);
                                     break;
                                 //fin opc 6
                                 case 7:
                                     System.out.println("Ingrese nueva altura: ");
                                     int nalt = pochita.nextInt();
-                                    ((Primates)lista.get(index)).setAltura(nalt);
+                                    ((Primates) lista.get(index)).setAltura(nalt);
                                     break;
                                 //fin opc 7
                                 case 8:
                                     System.out.println("Ingrese nuevo peso: ");
                                     int npes = pochita.nextInt();
-                                    ((Primates)lista.get(index)).setPeso(npes);
+                                    ((Primates) lista.get(index)).setPeso(npes);
                                     break;
                                 //fin opc 8                                
                                 default:
@@ -521,6 +558,9 @@ public class Lab4P2_HectorSabillon {
             }
         }
 
+    }
+
+    public Lab4P2_HectorSabillon() {
     }
 
 }
