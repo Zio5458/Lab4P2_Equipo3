@@ -101,17 +101,15 @@ public class Normal extends Transporte {
     @Override
     public boolean viajar() {
         double consumo = (this.distancia * 0.15) + ((random.nextInt(75) + 25));
-        int comidatotal = 0;
-        int comidanecesaria = 0;
+        int hambrientos = 0;
         for (int i = 0; i < primates.size(); i++) {
-            comidatotal += primates.get(i).getCant_comida();
+            if (primates.get(i).getCant_comida() < (primates.get(i).getCom_pkm()) * distancia){
+                hambrientos++;
+            }
         }
 
-        for (int i = 0; i < primates.size(); i++) {
-            comidanecesaria += primates.get(i).getCom_pkm();
-        }
         
-        if (primates.isEmpty() || consumo > (galones * tanque) || comidanecesaria > comidatotal) {
+        if (primates.isEmpty() || consumo > (galones * tanque) || hambrientos > 0) {
             return false;
         } else {
             this.galonesPostViaje = 0;

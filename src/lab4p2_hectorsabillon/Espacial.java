@@ -81,17 +81,14 @@ public class Espacial extends Transporte {
     @Override
     public boolean viajar() {
         double consumo = ((this.distancia * 0.32) + ((random.nextInt(10) + 25)) + 3) * (3/2);
-        int comidatotal = 0;
-        int comidanecesaria = 0;
-        for (int i = 0; i < primates.size(); i++){
-            comidatotal += primates.get(i).getCant_comida();
-        }//for comida total disponible
+        int hambrientos = 0;
+        for (int i = 0; i < primates.size(); i++) {
+            if (primates.get(i).getCant_comida() < (primates.get(i).getCom_pkm()) * distancia){
+                hambrientos++;
+            }
+        }
         
-        for (int i = 0; i < primates.size(); i++){
-            comidanecesaria += primates.get(i).getCom_pkm();
-        }//for comida necesaria para el viaje
-        
-        if (consumo > (galones * tanque) || comidanecesaria > comidatotal || primates.isEmpty()){
+        if (consumo > (galones * tanque) || hambrientos > 0 || primates.isEmpty()){
             return false;
         } else {
             return true;
